@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import { List, Green, Red } from './statistics.styiled';
 
-export const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
-  <div >    
+export const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
+  return (
+    <div >    
     <h2 >Statistics</h2>
     <List >
       <Green>Good: {good}</Green>
@@ -12,8 +13,12 @@ export const Statistics = ({ good, neutral, bad, total, positivePercentage }) =>
       <li>Positive feedback: {positivePercentage}%</li>
     </List>
   </div>
+  )
+}
+  
+  
 
-);
+
 
 Statistics.propTypes = {
   good: PropTypes.number.isRequired,
